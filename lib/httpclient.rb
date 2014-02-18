@@ -689,6 +689,11 @@ class HTTPClient
     request(:put, uri, argument_to_hash(args, :body, :header), &block)
   end
 
+  # Sends PATCH request to the specified URL.  See request for arguments.
+  def patch(uri, *args, &block)
+    request(:patch, uri, argument_to_hash(args, :body, :header), &block)
+  end
+  
   # Sends DELETE request to the specified URL.  See request for arguments.
   def delete(uri, *args, &block)
     request(:delete, uri, argument_to_hash(args, :body, :header), &block)
